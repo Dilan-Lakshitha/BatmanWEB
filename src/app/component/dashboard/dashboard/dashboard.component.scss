@@ -1,0 +1,47 @@
+.search-results-container {
+    max-height: 300px;
+    width: 100%;
+    overflow-x: auto;
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    padding: 10px;
+    background-color: rgba(6, 5, 12, 0.852);
+    flex-wrap: wrap;
+  }
+  
+
+  .gadget-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 8px;
+    width: 400px;
+    box-sizing: border-box;
+    overflow: hidden;
+  }
+  
+  .gadget-item img {
+    max-width: 80px;
+    height: auto;
+    border-radius: 5px;
+    margin-right: 10px;
+  }
+  
+
+  .gadget-item span {
+    font-weight: bold;
+    margin-right: 10px;
+  }
+  
+ 
+  .gadget-item p {
+    font-size: 0.9rem;
+    flex-grow: 1;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+  

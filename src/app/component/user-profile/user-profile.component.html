@@ -4,7 +4,7 @@
   </div>
   
   <div class="gadget-showcase">
-    <div *ngFor="let item of items" class="gadget-item">
+    <div *ngFor="let item of filteredGadgets" class="gadget-item">
       <img [src]="item.img" alt="{{ item.name }}" />
       <span>{{ item.name }}</span>
       <p>{{ item.description }}</p>

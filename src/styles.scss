@@ -5,3 +5,142 @@
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.dark .primary-icon svg {
+    fill: orange;
+  }
+  
+  .secondary-icon svg {
+    fill: #6b7280;
+  }
+  
+  .dark .secondary-icon svg {
+    fill: #e5e7eb;
+  }
+  
+  .text-heading {
+    color: #000 !important;
+  }
+  
+  .dark .text-heading {
+    color: #FFF !important;
+  }
+  
+  .table-heading {
+    background-color: rgb(228, 228, 231) !important;
+  }
+  
+  .dark .idea-edit-select.mat-focused .mat-form-field-ripple {
+    background-color: #f1f5f9 !important;
+  }
+  
+  .dark .idea-edit-select.mat-focused .mat-form-field-label mat-label,
+  .dark .mat-focused .mat-form-field-label .mat-form-field-required-marker {
+    color: #f1f5f9 !important;
+  }
+  
+  .dark .idea-edit-select.mat-select .mat-select-value-text {
+    color: rgb(71, 71, 71) !important;
+  }
+  
+  .dark .mat-tab-label {
+    background-color: rgb(54, 54, 54) !important;
+    border-left: 1px solid rgb(98, 98, 98);
+    border-right: 1px solid rgb(98, 98, 98);
+  }
+  
+  .dark .mat-tab-label-active {
+    background-color: rgb(74, 74, 74) !important;
+    color: white !important;
+  }
+  
+  .dark .mat-focused .mat-form-field-label {
+    color: #f1f5f9 !important;
+  }
+  
+  .dark .mat-focused .mat-form-field-ripple {
+    background-color: #f1f5f9 !important;
+  }
+  
+  body.dark .mat-primary .mat-pseudo-checkbox-checked {
+    background-color: #fff !important;
+  }
+  
+  body.dark .mat-primary .mat-option.mat-selected:not(.mat-option-disabled) {
+    color: #fff !important;
+  }
+  
+  .mat-form-field-label {
+    color: black !important;
+  }
+  
+  .mat-form-field-underline {
+    background-color: black !important;
+    ;
+  }
+  
+  .mat-form-field-ripple {
+    background-color: black !important;
+  }
+  
+  .mat-input-element {
+    color: black !important;
+  }
+  
+  body.dark {
+    .mat-form-field-label {
+      color: white !important;
+    }
+  
+    .mat-form-field-underline {
+      background-color: white !important;
+    }
+  
+    .mat-form-field-ripple {
+      background-color: white !important;
+    }
+  
+    .mat-select-value-text,
+    .mat-input-element {
+      color: white !important;
+    }
+  
+    .mat-form-field.mat-focused .mat-form-field-label,
+    .mat-select-value {
+      color: white !important;
+    }
+  
+    .mat-select-panel {
+      background-color: #1e293b !important;
+      color: white !important;
+    }
+  
+    .mat-option-text {
+      color: white !important;
+    }
+  }
+  
+  body.dark {
+  
+    /* Checkbox label color */
+    .mat-checkbox-label {
+      color: white !important;
+    }
+  
+    /* Checkbox border color */
+    .mat-checkbox .mat-checkbox-frame {
+      border-color: white !important;
+    }
+  
+    /* Checkbox checkmark and background color */
+    .mat-checkbox-checked .mat-checkbox-background {
+      background-color: white !important;
+      /* White background */
+    }
+  
+    /* Checkbox ripple effect color */
+    .mat-checkbox-ripple .mat-ripple-element {
+      background-color: rgba(255, 255, 255, 0.2) !important;
+      /* Light ripple */
+    }
+  }

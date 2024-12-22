@@ -1,12 +1,20 @@
-<div
-  class="relative flex-1 bg-cover bg-center h-screen"
-  style="background-image: url('../../../../assets/img/batman-8510022_1280.png');"
->
-  <!-- Overlay -->
-  <div
-    class="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center text-center text-white"
-  >
-    <h1 class="text-4xl md:text-6xl font-bold mb-4">The Dark Knight</h1>
-    <p class="text-lg md:text-2xl">I am vengeance. I am the night.</p>
+<div *ngIf="searchQuery" class="search-results-container">
+    <span class="font-bold text-white">Search Results:</span>
+    <div *ngFor="let item of filteredItems" class="gadget-item">
+      <img [src]="item.img" alt="{{ item.name }}" />
+      <div>
+        <span>{{ item.name }}</span>
+        <p>{{ item.description }}</p>
+      </div>
+    </div>
   </div>
+  
+
+<div class="relative flex-1 bg-cover bg-center h-screen w-full"
+    style="background-image: url('../../../../assets/img/batman-8510022_1280.png');">
+    <div
+        class="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center text-center text-white">
+        <h1 class="text-4xl md:text-6xl font-bold mb-4">The Dark Knight</h1>
+        <p class="text-lg md:text-2xl">I am vengeance. I am the night.</p>
+    </div>
 </div>

@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { UserDialogComponent } from '../../component/user-profile/user-dialog/user-dialog.component';
+import { SearchQueryService } from 'src/app/services/search-query.service';
 
 @Component({
   selector: 'app-user-profile',
@@ -8,11 +9,16 @@ import { UserDialogComponent } from '../../component/user-profile/user-dialog/us
   styleUrls: ['./user-profile.component.scss']
 })
 export class UserProfileComponent implements OnInit {
-  constructor(private matdialog:MatDialog){
+  searchQuery: string = ''; 
+
+  constructor(private matdialog:MatDialog , 
+    private searchQueryService: SearchQueryService){
 
   }
   ngOnInit(): void {
-    throw new Error('Method not implemented.');
+    this.searchQueryService.searchQuery$.subscribe(query => {
+      this.searchQuery = query;
+    });
   }
 
   items = [
@@ -21,6 +27,12 @@ export class UserProfileComponent implements OnInit {
     { id: '3', name: 'Batman Car', description: 'A high-tech vehicle.', img: '../../../assets/img/ai-generated-7700259_1280.jpg'}
   ];
 
+  get filteredGadgets() {
+    return this.items.filter(gadget =>
+      gadget.name.toLowerCase().includes(this.searchQuery.toLowerCase()) ||
+      gadget.description.toLowerCase().includes(this.searchQuery.toLowerCase())
+    );
+  }
   viewDetails(str:any):void{
     const dialogRef = this.matdialog.open(UserDialogComponent,{
       width:'w-auto',

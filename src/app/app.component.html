@@ -1,9 +1,12 @@
 <div class="flex flex-col flex-1">
-  <app-nav-bar></app-nav-bar>
-  <main class="flex-1 p-6">
+  <app-nav-bar (search)="onSearch($event)"></app-nav-bar>
+  <main class="flex-1">
     <router-outlet></router-outlet>
   </main>
-  <footer class="bg-gray-900 text-white text-center p-4">
-    <p>© 2024 Wayne Enterprises | <a href="#" class="text-blue-400">Contact</a></p>
+  <footer class="bg-gray-900 dark:bg-gray-300 text-white dark:text-black text-center p-4">
+    <p>© 2024 Wayne Enterprises |
+      <a href="https://twitter.com/wayneenterprises" class="text-blue-400" target="_blank">Follow us on Twitter</a> |
+      <a href="mailto:batman@gotham.com" class="text-blue-400">Contact</a>
+    </p>
   </footer>
 </div>

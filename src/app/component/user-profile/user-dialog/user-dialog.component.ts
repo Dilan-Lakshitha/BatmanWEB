@@ -12,8 +12,6 @@ export class UserDialogComponent implements OnInit {
     console.log(this.data);
   }
 
-
-
   closeDialog(): void {
     this.dialogRef.close();
   }
