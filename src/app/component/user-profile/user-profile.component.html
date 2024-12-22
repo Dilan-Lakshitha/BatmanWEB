@@ -1,0 +1,14 @@
+<div class="bio-section">
+    <h1>Bruce Wayne / Batman</h1>
+    <span>Gotham's protector, billionaire philanthropist, and master detective</span>
+  </div>
+  
+  <div class="gadget-showcase">
+    <div *ngFor="let item of items" class="gadget-item">
+      <img [src]="item.img" alt="{{ item.name }}" />
+      <span>{{ item.name }}</span>
+      <p>{{ item.description }}</p>
+      <button class="view-details-btn" (click)="viewDetails(item)">View Details</button>
+    </div>
+  </div>
+  
